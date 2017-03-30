@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+	
+		<title>Find my Brew</title>
+				<!--bootstrap
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+//Optional theme
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+		<!-- external CSS link -->
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.css">
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.0/dist/MarkerCluster.Default.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster+Two:400,400i" rel="stylesheet">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+
+
+		
+	</head>
+	<body>
+	<section id="backgroundMap">
+	<header>
+		<div id="topMenu">
+			<div><img id="logo" src="images/logo.png"></div><!--#logo-->
+			<div id="menuLinks">
+				<ul>
+					<li class="link"><a class="topMenu" id="about" href="#">About</a></li>
+					<li class="link"><a class="topMenu selected" id="explore" href="#">Explore</a></li>
+				</ul>
+				<ul id="exploreSub">
+					<li class="subMenu"><a id="byState" href="#">Select State</a></li>
+					<div id="stateSelect">
+			<select class="filters" id="states" name="states">
+				<option label="None" selected>Select State</option>
+				<option value="Alabama">Alabama</option>
+				<option value="Alaska">Alaska</option>
+				<option value="Arizona">Arizona</option>
+				<option value="Arkansas">Arkansas</option>
+				<option value="California">California</option>
+				<option value="Colorado">Colorado</option>
+				<option value="Connecticut">Connecticut</option>
+				<option value="Delaware">Delaware</option>
+				<option value="Florida">Florida</option>
+				<option value="Georgia">Georgia</option>
+				<option value="Idaho">Idaho</option>
+				<option value="Illinois">Illinois</option>
+				<option value="Indiana">Indiana</option>
+				<option value="Iowa">Iowa</option>
+				<option value="Kansas">Kansas</option>
+				<option value="Kentucky">Kentucky</option>
+				<option value="Lousiana">Lousiana</option>
+				<option value="Maine">Maine</option>
+				<option value="Maryland">Maryland</option>
+				<option value="Massachussets">Massachussets</option>
+				<option value="Michigan">Michigan</option>
+				<option value="Minnesota">Minnesota</option>
+				<option value="Mississipi">Mississipi</option>
+				<option value="Missouri">Misouri</option>
+				<option value="Montana">Montana</option>
+				<option value="Nebraska">Nebraska</option>
+				<option value="Nevada">Nevada</option>
+				<option value="New Hamshire">New Hamshire</option>
+				<option value="New Jersey">New Jersey</option>
+				<option value="New Mexico">New Mexico</option>
+				<option value="New York">New York</option>
+				<option value="North Carolina">North Carolina</option>
+				<option value="North Dakota">North Dakota</option>
+				<option value="Ohio">Ohio</option>
+				<option value="Oklahoma">Oklahoma</option>
+				<option value="Pennsylvania">Pennsylvania</option>
+				<option value="Rhode Island">Rhode Island</option>
+				<option value="South Carolina">South Carolina</option>
+				<option value="South Dakota">South Dakota</option>
+				<option value="Tennessee">Tennessee</option>
+				<option value="Texas">Texas</option>	
+				<option value="Utah">Utah</option>
+				<option value="Vermont">Vermont</option>
+				<option value="Virginia">Virginia</option>
+				<option value="Washington">Washington</option>
+				<option value="West Virginia">West Virginia</option>
+				<option value="Wisconsin">Wisconsin</option>
+				<option value="Wyoming">Wyoming</option>				
+			</select>
+			</div>
+				</ul>
+			</div><!--#menuLinks-->
+			
+		</div><!--#topMenu-->
+	</header>
+	<div id="instruction">
+		<h3 class="instructionText" id="aboutInstruction">What is Findmybrew.com?</h3>
+		<h3 class="instructionText" id="exploreInstruction">Explore the map to find a new brewery</h3></p>
+	</div>
+
+		<div id="map"></div>
+		<section id="aboutSection">
+			<div id="aboutText">
+				<p id="aboutDescr">	At Find My Brew we believe that the best way to get know a new place, know new people or even explore the place that you already live is through the experience of trying new local craft beers. Explore our map and discover a new place or revisit old places and be sure that no matter where you go, you will find people that are as passionate  about beers as you are. Collect experiences, try new tastes and surely make new friends along the way!</p>
+
+				<p id="cheers">Cheers!</p>
+		</div>
+			<div>
+				<h3 id="nanoTitle">Micro-brewery  vs  Nano-brewery</h3>
+				<div id="nanoText">	
+					<p id="nanoDescr">	A micro-brewery typically uses between a 30 to 60 barrel brew system. The brewery typically only has one brew system, unlike Craft breweries which can have several brewing systems. At a micro-brewery the system will produce about one batch of beer a day to one batch of beer every other day. Several micro-breweries still produce beers on a 15barrel system at the rate of one batch every other day for a total of 3,000 barrels a year. This is 3,000 barrel output is close to the output of a nano-brewery. A nano-brewery usually uses a 7.5barrel systems (1/3 to 1/10th the size of a microbrewery) and produces beer at the rate of a few batches a week. This puts the total output of a nano-brewery at 1,000 barrels per year.
+					</p>
+				</div>
+			</div>
+		</section>
+	</section>
+		<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+		<script src='https://unpkg.com/leaflet.markercluster@1.0.0/dist/leaflet.markercluster.js'></script>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	</body>
+</html>

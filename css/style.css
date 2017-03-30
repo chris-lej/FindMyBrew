@@ -1,0 +1,372 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 10px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+}
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+/* Center the container */
+#container {
+	width: 100%;
+	margin: auto;
+}
+
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+/*Header Menu*/
+#byState{
+     cursor: default;
+}
+
+#exploreSub{
+     clear: none;
+     display: none;
+     padding-left: 15em;
+     margin-top: 0em;
+}
+
+#logo{
+     height: 50px;
+     display: inline-block;
+     float: left;
+     margin: 1em 2px 1em 5em;
+     transition: margin .7s;
+}
+
+#logo.down{
+     display: inline-block;
+     margin-top: 2.5em;
+     margin-left: 5em;
+}
+
+#menuLinks{
+     display: inline-block;
+     margin-top: 1em;
+}
+
+#stateSelect{
+     padding-bottom:5px;
+     display: inline;
+}
+
+#states{
+     display: none;
+     text-align: left;
+     padding: .5em 0em;
+     margin: 0em;
+}
+
+
+#topMenu{
+     width: 100%;
+     background-color: rgba(244,244,244,1);
+     float: left;
+     margin-top: 2em;
+}
+
+.link{
+     display: inline-block;
+     text-decoration: none;
+     font-size: 2em; 
+     font-family: 'Merriweather', serif;
+     font-weight: 400;    
+     margin: 0em 1em;
+}
+
+.subMenu{
+     display: inline-block;
+     font-size: 1.5em; 
+     font-family: 'Merriweather', serif;
+     margin: 0em 1em;
+}
+
+.subMenu a{
+     color: rgba(150,150,150,1);
+     border-bottom: 5px solid rgba(244,244,244,1);
+}
+
+.subMenu a:hover{
+     border-bottom: 1.5px solid rgba(150,150,150,.5);
+     transition: border 500ms ease;
+}
+
+
+a{
+     text-decoration:none;
+     color: rgba(55,55,55,1);
+     border-bottom: 2px solid rgba(244,244,244,1);
+     transition: border 500ms ease;
+}
+
+a:hover{
+     border-bottom: 2px solid rgba(66,111,63,.5);
+}
+
+a.selected{
+     color: rgba(150,150,150,1);
+     border-bottom: 2px solid rgba(244,244,244,1);
+}
+
+a.selected:hover{
+     border-bottom: 2px solid rgba(150,150,150,.5);
+}
+/*--------CONTENT------------*/
+
+#aboutSection{
+     display: none;
+    text-align: center;
+     font-family: 'Merriweather', cursive;
+     font-size: 1.5em;
+     font-style: italic;
+    font-weight: 300;
+}
+
+#aboutText{
+     display: inline-block;
+     text-align: left;
+     width: 50%;
+     color: rgba(150,150,150,1);
+     background-color: rgba(244,244,244,1);
+     padding: 0em 1em;
+     line-height: 1.6em;
+}
+#aboutText:first-letter{
+     margin-left: 2em;
+}
+#aboutInstruction{
+     display: none
+}
+
+#closeButton{
+     display: inline-block;
+     float: right;
+     cursor: pointer;
+}
+#instruction{
+     display: inline-block;
+     text-align: center;
+     width: 100%;
+}
+#nanoDescr{
+     font-size: 0.9em;
+     display: block;
+     margin-bottom: .5em;
+}
+#nanoText{
+     display: inline-block;
+    text-align: left;
+    width: 50%;
+    color: rgba(150,150,150,1);
+    background-color: rgba(244,244,244,1);
+    padding: 0em 1em;
+    line-height: 1.6em;
+}
+#nanoTitle{
+     display: block;
+     font-size: 1em;
+     margin-bottom: .5em;
+}
+#map{
+     height:85vh;
+}
+#observation{
+     margin:0em 0em 1em 0em;
+     font-family: 'Merriweather', cursive;
+     font-size: 1em;
+     font-style: italic;
+     clear: none;
+     margin:0px 0px 5px 0px;
+     color: rgba(150,150,150,1);
+}
+h3{
+     display: inline-block;
+     font-family: 'Merriweather', cursive;
+     font-size: 1.7em;
+     font-style: italic;
+     clear: none;
+     margin:8px 0px 0px 0px;
+     color: rgba(150,150,150,1);
+}
+h4{
+     float: left;
+}
+
+
+@media only screen and (max-width: 800px){
+     #aboutSection {
+          font-size: 1em;
+     }
+     #aboutText{
+          width: 86%;
+     }
+     #nanoDescr{
+     font-size: 1em;
+     }
+     #nanoTitle{
+          font-size: 1.5em;
+     }
+     #nanoText{
+          width: 86%;
+     }     
+}
+@media only screen and (max-device-width: 800px){
+     #aboutSection {
+          font-size: 1em;
+     }
+     #aboutText{
+          width: 86%;
+     }
+     #nanoDescr{
+     font-size: 1em;
+     }
+     #nanoTitle{
+          font-size: 1.5em;
+     }
+     #nanoText{
+          width: 86%;
+     }  
+}
+
+@media only screen and (max-width: 500px){
+     h3{
+          font-size:1em;
+     }
+     #map{
+          height: 80vh;
+     }
+     .link{
+          display: block;
+          font-size: 1.5em;
+          font-weight: 300;
+          margin: 0em 0em 0.5em;
+     }
+     #logo{
+          height: 45px;
+          margin: 2em 0px 0em 2em;
+     }
+     .subMenu{
+          font-size: 1em;
+          margin: 0em 0em 0em 1em;
+     }
+     ul{
+          padding: 0em 0em 0em 2em;
+          display: inline-block;
+     }
+     #logo.down{
+           margin-left: 2em;
+           margin-top: 2em;
+     }
+     #exploreSub{
+          display: none;
+          padding: 0em;
+     }
+
+     #aboutSection {
+          font-size: 1em;
+     }
+     #nanoTitle{
+          font-size: 1em;
+
+}
+@media only screen and (max-device-width: 500px){
+     h3{
+          font-size:1em;
+     }
+     #map{
+          height: 80vh;
+     }
+     .link{
+          display: block;
+          font-size: 1.5em;
+          font-weight: 300;
+          margin: 0em 0em 0.5em;
+     }
+     #logo{
+          height: 45px;
+          margin: 2em 0px 0em 2em;
+     }
+     .subMenu{
+          font-size: 1em;
+          margin: 0em 0em 0em 1em;
+     }
+     ul{
+          padding: 0em 0em 0em 2em;
+          display: inline-block;
+     }
+     #logo.down{
+           margin-left: 2em;
+           margin-top: 2em;
+     }
+     #exploreSub{
+          display: none;
+          padding: 0em;
+     }
+
+     #aboutSection {
+          font-size: 1em;
+     }
+     #nanoTitle{
+          font-size: 1em;
+
+}
